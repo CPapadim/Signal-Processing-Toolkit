@@ -50,68 +50,6 @@ for i=typelist
 end
 
 
-%%%%%FIGURES%%%%%
-%%%%%%%%%%%%%%%%%
-%
-%%%%%%%%%%%%%% Spike Averaged LFP %%%%%%%%%%%%%%%%%%%%%%%%
-%
-%h=figure
-%ystep=(time_end-time_start)/(size(spikeAvgdSorted,2)-1);
-%typecount=0;
-%for i=typelist
-%	typecount=typecount+1;
-%	hh(typecount)=subplot(length(typelist),1,typecount), plot((time_start:ystep:time_end),squeeze(spikeAvgdSorted(typecount,:,1)));
-%	%set(gca,'XTick',[],'YTick',[]);
-%end
-%set(hh,'box','off');
-%set(hh(1:end-1),'XColor',[0.99999999 0.99999999 0.99999999]); %PostScript doesn't seem to like printing pure white so using color close to white instead
-%set(get(hh(end),'XLabel'),'String','Averaging Time Window (ms) - 0 ms is Spike Occurance');
-%linkaxes(hh');
-%set(h,'PaperPositionMode','auto','PaperSize',[100 100])
-%print(h,'-dpsc2','-loose','-r1000','spikeAvgLFP.ps');
-%
-%
-%h=figure;
-%ystep=(time_end-time_start)/(size(spikeAvgdSorted,2)-1);
-%linecolors=jet(length(1:(max(typelist)-min(typelist)+1)));
-%coloridx=typelist-(min(typelist)-1);
-%%linecolors=jet(length(min(typelist):max(typelist)));
-%%coloridx=(1:length(min(typelist):max(typelist)));
-%hold on;
-%for pp=1:length(typelist);
-%	plot((time_start:ystep:time_end),squeeze(spikeAvgdSorted(pp,:,1)),'Color',linecolors(coloridx(pp),:));
-%end
-%legendString = cellstr(num2str(typelist'));
-%legend(legendString,'Location','EastOutside');
-%title('Spike Avgd LFP');
-%ylabel('LFP Signal');
-%xlabel('Averaging Time Window (ms) - 0 ms is Spike Occurance'); 
-%set(h,'PaperPositionMode','auto')
-%print(h,'-dpsc2','-loose','-r600','-append','spikeAvgLFP.ps');
-%
-%
-%h=figure;
-%hold on
-%plot(typelist,(squeeze(mean(abs(spikeAvgdSorted(:,:,1)),2))));
-%scatter(typelist,(squeeze(mean(abs(spikeAvgdSorted(:,:,1)),2))));
-%set(gca,'XTick',typelist);
-%title('Spike Avgd LFP Tuning');
-%ylabel('LFP Signal Mean');
-%xlabel('Trial Type');
-%set(h,'PaperPositionMode','auto')
-%print(h,'-dpsc2','-loose','-r600','-append','spikeAvgLFP.ps');
-%
-%h=figure;
-%ystep=(time_end-time_start)/(size(spikeAvgdSorted,2)-1);
-%imagesc((time_start:ystep:time_end),1:length(typelist),squeeze(spikeAvgdSorted(:,:,1)));
-%set(gca,'YTickLabel',typelist);
-%colorbar
-%title('Spike Avgd LFP');
-%ylabel('Trial Type');
-%xlabel('Averaging Time Window (ms) - 0 ms is Spike Occurance'); 
-%set(h,'PaperPositionMode','auto')
-%print(h,'-dpsc2','-loose','-r600','-append','spikeAvgLFP.ps');
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % Data Output		%
