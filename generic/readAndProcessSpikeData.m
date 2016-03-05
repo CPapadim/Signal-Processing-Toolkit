@@ -60,12 +60,4 @@ function [TrialSpikes] = readAndProcessSpikeData(trialfile, spikefile, time_inte
 	end
 	
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%%%%%%  Align Spikes if we're not getting them from grab         %%%%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	%if(alpha_plex==1)
-	%	[TrialSpikes]=alignSpikeTrials(TrialSpikes,StartTime,time_interval);
-	%end
-
 end
