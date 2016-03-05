@@ -47,7 +47,7 @@ bw        = wo;
 
 
 %% APPLY FILTERS
-%Signal=filtfilt(notch_b,notch_a,Signal); %Apply Notch
-%Signal=filtfilt(Hd2.sosMatrix,Hd2.ScaleValues,Signal); %Lowpass
-%Signal=filtfilt(Hd.sosMatrix,Hd.ScaleValues,Signal); %Highpass
+Signal=filtfilt(notch_b,notch_a,Signal); %Apply Notch
+Signal=filtfilt(Hd2.sosMatrix,Hd2.ScaleValues,Signal); %Lowpass
+Signal=filtfilt(Hd.sosMatrix,Hd.ScaleValues,Signal); %Highpass
 FilteredSignal = Signal;
