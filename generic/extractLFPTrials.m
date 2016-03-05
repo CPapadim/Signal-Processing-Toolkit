@@ -50,17 +50,5 @@ function [ExtractedLFPTrials,LFPTrialTimes,LFPTrialStamps] = extractLFPTrials(Si
         [LFPTrialStamps,LFPTrialTimes,ExtractedLFPTrials]=remDupTrialStamps(ReachTrialStamps,LFPTrialStamps,LFPTrialTimes,ExtractedLFPTrials,commandline);
 								    
 	end
-	
-	% Pick out the LFP Trials that match the reach trials returned by grab
-	% REPLACED with other code - Remove if everything is working fine
-        %
-	%ExtractedLFPTrials={};
-	%ExtractedLFPIndex=[];
-        %for i=1:size(LFPTrialArray,2)
-        %        if(ismember(LFPTrialStamps(i),ReachTrialStamps))
-        %                ExtractedLFPTrials{end+1}=LFPTrialArray{i};
-	    %		ExtractedLFPIndex=[ExtractedLFPIndex i];
-        %        end
-        %end
 
 end
