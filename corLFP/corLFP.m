@@ -14,7 +14,6 @@
 warning off all
 
 %Import Parameters when not being used as function
-%[commandline, datadirectory, trialfile, spikefile, time_interval,Params.time_start, time_end, smoothdata, electrode1, electrode2, freq_start, freq_end, junk_freq_step, alpha_plex, junk_hemisphere,paramsstr] = readParams('Parameters.temp');
 Params = readParams('Parameters.temp');
 
 
